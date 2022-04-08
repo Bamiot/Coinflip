@@ -1,0 +1,34 @@
+@import "./_sass/normalize";
+@import "./_sass/variables";
+@import "./_sass/mixins";
+
+// global
+body {
+  @include flex(row, center, center, wrap);
+}
+
+input,
+input:focus,
+button {
+  outline: 1px solid black;
+  margin: #{$margin / 2};
+  padding: $padding #{$padding * 2};
+  border-radius: #{$border-radius / 2};
+  color: black;
+  font-weight: 600;
+  background-color: $white;
+}
+
+button,
+input[type="submit"] {
+  &:hover {
+    cursor: pointer;
+    background-color: $primary-color;
+    color: $white;
+  }
+}
+
+// classes
+.hidden {
+  display: none !important;
+}
